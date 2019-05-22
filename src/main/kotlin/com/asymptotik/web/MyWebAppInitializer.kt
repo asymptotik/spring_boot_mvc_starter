@@ -13,7 +13,7 @@ open class MyWebAppInitializer : SpringBootServletInitializer() {
     }
 
     override fun configure(application: SpringApplicationBuilder): SpringApplicationBuilder {
-        MyWebAppInitializer.logger.error("onStartup!!!!!!!!!!!!!!!!!!!")
+        MyWebAppInitializer.logger.info("Starting Up!")
         return application.sources(MyWebAppInitializer::class.java)
     }
 
