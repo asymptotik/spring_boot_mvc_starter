@@ -27,11 +27,15 @@ dependencies {
     implementation "org.jetbrains.kotlin:kotlin-reflect"
     implementation "com.fasterxml.jackson.module:jackson-module-kotlin:2.9.8"
     implementation ("org.springframework.boot:spring-boot-starter-web") {
-        // exclude starter logging in favor of log4j12.
-        exclude module: 'spring-boot-starter-logging'
         exclude module: 'spring-boot-starter-tomcat'
     }
-    implementation "org.apache.logging.log4j:log4j-slf4j-impl"
+    implementation "org.springframework.boot:spring-boot-starter-jdbc"
+    
+    implementation "org.springframework.boot:spring-boot-starter-security"
+    
+    implementation "org.springframework.security.oauth.boot:spring-security-oauth2-autoconfigure:2.1.5.RELEASE"
+    
+    implementation "mysql:mysql-connector-java"
 
     compileOnly "javax.servlet:javax.servlet-api"
     

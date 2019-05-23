@@ -14,6 +14,8 @@ open class WebConfig : WebMvcConfigurer {
 
     override fun addViewControllers(registry: ViewControllerRegistry) {
         registry.addViewController("/hello")
+        registry.addViewController("/index")
+        registry.addRedirectViewController("/", "/index")
     }
 
     @Bean
@@ -21,7 +23,6 @@ open class WebConfig : WebMvcConfigurer {
         val bean = InternalResourceViewResolver();
         bean.setPrefix("/WEB-INF/view/")
         bean.setSuffix(".jsp")
-
         return bean
     }
 
